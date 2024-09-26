@@ -1,0 +1,13 @@
+
+
+https://kind.sigs.k8s.io/docs/user/ingress/
+
+
+kind create cluster --name asptest --config sampleaspcluster.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+
+kind delete cluster --name=asptest
+
+----------------------------------------------------------------------
+

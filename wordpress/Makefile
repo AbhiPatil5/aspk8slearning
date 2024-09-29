@@ -24,8 +24,3 @@ delete-wordpress:
 	kubectl delete Deployment -n wordpress wordpress
 	kubectl delete namespace wordpress
 
-deploy-ingress-controller:
-	kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
-
-delete-kind-cluster:
-	kind delete cluster --name=asptest

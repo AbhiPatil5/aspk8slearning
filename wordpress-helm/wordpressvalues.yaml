@@ -1,0 +1,73 @@
+## Default values for Wordpress deployment
+
+## Number of wordpress replicas
+replicaCount: 1
+
+## Netxcloud docker image
+image:
+  registry: "docker.io"
+  repository: "wordpress"
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+
+#service:
+#  type: ClusterIP
+#  port: 80
+#  ## The node port (only relevant for type LoadBalancer or NodePort)
+#  nodePort:
+#  ## The cluster ip address (only relevant for type LoadBalancer or NodePort)
+#  clusterIP:
+#  ## The loadbalancer ip address (only relevant for type LoadBalancer)
+#  loadBalancerIP:
+#  # Annotations to add to the service
+#  annotations: {}
+
+## Ingress configuration
+ingress:
+  ## Enable ingress endpoint
+  enabled: true
+
+  ## Hosts
+  hosts:
+    - host:
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+  ## TLS settings for hosts
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+## MariaDB configuration
+mariadb:
+  ## Enable MariaDB helm chart for deployment (default: false)
+  enabled: true
+
+  ## Database configuration
+  settings:
+    ## The root user password
+    rootPassword: mariapass
+
+  ## Optional user database which is created during first startup with user and password
+  userDatabase:
+    ## Name of the user database
+    name: wp
+    ## Database user with full access rights
+    user: wp
+    ## Password of the database user
+    password: wp
+
+  ## Storage parameters
+  #storage:
+  #  ## Set persistentVolumenClaimName to reference an existing PVC
+  #  persistentVolumeClaimName:
+#
+  #  ## Alternative set requestedSize to define a size for a dynmaically created PVC
+  #  requestedSize:
+#
+  #  ## the storage class name
+  #  className:

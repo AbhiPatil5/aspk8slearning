@@ -31,7 +31,7 @@ ingress:
 
   ## Hosts
   hosts:
-    - host:
+    - host: wp.example.com
       paths:
         - path: /
           pathType: ImplementationSpecific

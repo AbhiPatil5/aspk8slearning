@@ -17,7 +17,7 @@ server:
       - /
 configs:
   params:
-    server.insecure: false
+    server.insecure: true
     #server.basehref: /argocd
     # -- Used if Argo CD is running behind reverse proxy under subpath different from /
     #server.rootpath: '/argocd'

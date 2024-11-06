@@ -3,7 +3,7 @@ install-kind:
 	chmod +x ./kind
 	sudo mv ./kind /usr/local/bin/kind
 
-create-kind6-cluster:
+create-kind-cluster:
 	kind create cluster --name asptest --config sampleaspcluster.yaml
 
 deploy-ingress-controller:

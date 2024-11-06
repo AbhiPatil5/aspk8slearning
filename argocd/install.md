@@ -49,7 +49,7 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#ssl-passthroug
 credentials
 
 admin
-94SUtpNSNcNcPFn9
+GXQKq9rG38TtGPLk 
 
 
 ##############################################################################

@@ -60,7 +60,7 @@ metadata:
   namespace: kustmyapp
 spec:
   rules:
-  - host: my-app.local
+  - host: myapp.example.com
     http:
       paths:
       - path: /

@@ -1,3 +1,14 @@
+#helm search repo
+#
+#helm list -A
+#
+###############################################################################
+#
+#
+#helm repo add argo https://argoproj.github.io/argo-helm
+#helm repo remove argo 
+#helm search repo
+
 create-namespace-aspcore:
 	kubectl create namespace aspcore
 

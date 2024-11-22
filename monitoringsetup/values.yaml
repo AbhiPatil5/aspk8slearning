@@ -1,0 +1,44 @@
+# values.yaml
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - prometheus.example.com
+    paths:
+      - /
+  additionalScrapeConfigs:
+    - job_name: 'prometheus'
+      static_configs:
+        - targets: ['localhost:9090']
+  server:
+    params:
+      server.insecure: true
+
+grafana:
+  enabled: true
+  adminPassword: "admin"
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - grafana.example.com
+    paths:
+      - /
+  server:
+    params:
+      server.insecure: true
+
+alertmanager:
+  enabled: false
+
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
+
+prometheusOperator:
+  enabled: true

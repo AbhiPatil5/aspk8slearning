@@ -10,7 +10,23 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo remove  prometheus-community
 
 helm repo update
+##############################################################################
+http://prometheus.example.com/
+
+http://grafana.example.com/
+admin
+admin
 
 ##############################################################################
 
 
+
+Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+http://prometheus.example.com/
+
+http://grafana.example.com/
+admin
+admin
+
+##############################################################################

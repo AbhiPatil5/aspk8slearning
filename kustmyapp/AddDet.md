@@ -17,7 +17,7 @@ Create Application manually in Argocd
   Name -- kustmyapp
   REPO URL - https://github.com/AbhiPatil5/aspk8slearning
   TARGET REVISION - main
-  PATH - k8sapp/kustmyapp/overlays/dev
+  PATH - kustmyapp/overlays/dev
 -------------------------------------------------------------
 
 

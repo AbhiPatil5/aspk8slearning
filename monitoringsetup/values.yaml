@@ -32,10 +32,22 @@ grafana:
       server.insecure: true
 
 alertmanager:
-  enabled: false
-
+  enabled: true
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - alertmanager.example.com
+    paths:
+      - /
+  server:
+    params:
+      server.insecure: true
+      
 kubeStateMetrics:
   enabled: true
+  ingress:
+    enabled: false
 
 nodeExporter:
   enabled: true

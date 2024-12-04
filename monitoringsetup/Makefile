@@ -9,8 +9,8 @@ create-namespace-aspmonitoring:
 	kubectl create namespace aspmonitoring
 
 deploy-prometheus:
-	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-	helm install prometheus --values values.yaml  prometheus-community/kube-prometheus-stack --namespace aspmonitoring
+#   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+	helm upgrade --install prometheus --values values.yaml  prometheus-community/kube-prometheus-stack --namespace aspmonitoring
 
 delete-prometheus:
 	helm uninstall prometheus

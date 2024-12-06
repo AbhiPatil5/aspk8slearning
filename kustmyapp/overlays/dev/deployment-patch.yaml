@@ -8,6 +8,6 @@
     httpGet:
       path: /
       port: 80
-      scheme: HTTPS
+      scheme: HTTP
     initialDelaySeconds: 30
     periodSeconds: 10

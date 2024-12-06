@@ -30,3 +30,10 @@ admin
 admin
 
 ##############################################################################
+
+
+All Pod kube state metrics  details 
+
+https://github.com/kubernetes/kube-state-metrics/blob/main/docs/metrics/workload/pod-metrics.md
+
+##############################################################################

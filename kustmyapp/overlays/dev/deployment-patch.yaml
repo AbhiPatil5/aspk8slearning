@@ -1,12 +1,12 @@
 - op: replace
   path: /spec/replicas
   value: 2
-  
+
 - op: add
   path: /spec/template/spec/containers/0/livenessProbe
   value:
     httpGet:
-      path: /healthz
+      path: /health
       port: 443
       scheme: HTTPS
     initialDelaySeconds: 30

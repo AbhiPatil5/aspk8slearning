@@ -6,7 +6,7 @@
   path: /spec/template/spec/containers/0/livenessProbe
   value:
     httpGet:
-      path: /hea
+      path: /healthz
       port: 443
       scheme: HTTPS
     initialDelaySeconds: 30

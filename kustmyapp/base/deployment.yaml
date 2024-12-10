@@ -15,4 +15,5 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: nginx
+        #image: nginx
+        image: abhijitdocker87/aspapphello:v1.0

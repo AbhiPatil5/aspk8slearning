@@ -15,14 +15,14 @@ spec:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/path: "/metrics"
-        prometheus.io/port: "8080"  # Replace with your application's port
+        prometheus.io/port: "80"  # Replace with your application's port
     spec:
       containers:
       - name: my-app
         #image: nginx
         image: abhijitdocker87/aspapphello:v1.0
         ports:
-        - containerPort: 8080  # Add this line to specify the container port
+        - containerPort: 80  # Add this line to specify the container port
         resources:
           requests:
             memory: "64Mi"

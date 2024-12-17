@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspwcapp
+  namespace: aspwcapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspwcapp
+  template:
+    metadata:
+      labels:
+        app: aspwcapp
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8080"  # Replace with your application's port
+    spec:
+      containers:
+      - name: aspwcapp
+        #image: nginx
+        image: abhijitdocker87/aspspringapp:v2.0
+        ports:
+        - containerPort: 8080  # Add this line to specify the container port
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

@@ -46,6 +46,8 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#ssl-passthroug
 
 ##############################################################################
 
+kubectl -n aspcore get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
 credentials
 
 admin

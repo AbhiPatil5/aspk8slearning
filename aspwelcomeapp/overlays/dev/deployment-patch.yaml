@@ -1,0 +1,13 @@
+- op: replace
+  path: /spec/replicas
+  value: 3
+
+- op: add
+  path: /spec/template/spec/containers/0/livenessProbe
+  value:
+    httpGet:
+      path: /
+      port: 80
+      scheme: HTTP
+    initialDelaySeconds: 30
+    periodSeconds: 10

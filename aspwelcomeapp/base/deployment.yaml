@@ -20,7 +20,7 @@ spec:
       containers:
       - name: aspwcapp
         #image: nginx
-        image: abhijitdocker87/aspspringapp:v2.0
+        image: abhijitdocker87/aspspringapp:v2.1
         ports:
         - containerPort: 8080  # Add this line to specify the container port
         resources:

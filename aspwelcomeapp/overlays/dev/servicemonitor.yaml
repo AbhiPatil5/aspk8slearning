@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: aspwcapp-monitor
+  namespace: aspwcapp
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: aspwcapp
+  namespaceSelector:
+    matchNames:
+    - aspwcapp
+  endpoints:
+  - port: 8080
+    path: /actuator/prometheus
+    interval: 30s

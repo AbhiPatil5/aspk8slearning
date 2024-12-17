@@ -14,7 +14,7 @@ spec:
         app: aspwcapp
       annotations:
         prometheus.io/scrape: "true"
-        prometheus.io/path: "/metrics"
+        prometheus.io/path: "/actuator/prometheus"
         prometheus.io/port: "8080"  # Replace with your application's port
     spec:
       containers:
